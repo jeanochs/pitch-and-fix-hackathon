@@ -165,8 +165,7 @@ header {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/hero-bg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-size: cover;
   background-position: center;
   height: 500px;
@@ -175,6 +174,14 @@ header {
   justify-content: center;
   color: white;
   text-align: center;
+  animation: animateBackground 10s infinite;
+}
+
+
+@keyframes animateBackground {
+	0% {background-image: url("../images/hero_bg_1.jpeg"); }
+	50% {background-image: url("../images/hero_bg_2.jpg"); }
+	100% {background-image: url("../images/hero_bg_1.jpeg"); }
 }
 
 .hero-content {
