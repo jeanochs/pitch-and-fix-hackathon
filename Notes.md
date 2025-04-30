@@ -8,6 +8,8 @@
 
 There are no rating stars in the actual webpage, even though it is coded in. 
 
+<hr>
+
 04/29/2025 - Messed up Input
 
 Newsletter input is messed up. 
@@ -22,6 +24,46 @@ Newsletter input is messed up.
 ```
 
 Quickly fixed by changing the "'" to an '"'. 
+
+<hr>
+
+04/30/2025 - "Active" class does not work
+
+The active thing is not taking effect on the link. 
+The code snippet is below.
+
+```
+<li id="nav-item"><a href="index.html" class="active">Home</a></li>
+
+```
+
+The `class="active"` does not actually work.
+
+<hr>
+
+04/30/2025 - Links don't actually work
+
+When I'm on the products page, the `home` link doesn;t actually take me back home. 
+
+The URL from the Products page doesn't show the correct link:
+
+```
+file://.../pitch-and-fix-hackathon/pages/index.html
+
+```
+
+Instead, it should be:
+
+```
+file://.../pitch-and-fix-hackathon/index.html
+
+```
+
+Not really familiar with this issue; the link is correct to my knowledge: `<li id="nav-item"><a href="index.html" class="active">Home</a></li>`
+
+I will see...
+
+<hr>
 
 
 
@@ -89,7 +131,6 @@ R2, C1 (Cutlery) - [link](https://www.google.com/url?sa=i&url=https%3A%2F%2Funsp
 
 R2, C2 (Air Fryer) - [link](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fair-fryer&psig=AOvVaw3ka0U5lKtHQc2FYyvEVTKT&ust=1745990164739000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCMjwlrW-_IwDFQAAAAAdAAAAABAE)
 
-<hr> 
 
 These 16 photos are combined into a 2000 by 2000 sized collage. 
 
@@ -100,7 +141,7 @@ A Photo is truly worth 1000 words.
 Now, my last act of magic for tonight is to make a scrolling collage for the banner of the main page. 
 It'll just be some basic photos of women shopping and stuff; good old boring boilerplate. 
 
-THe HTML won't be a problem, but the JS for this might be a bit annoying. 
+The HTML won't be a problem, but the JS for this might be a bit annoying. 
 
 *CSS delivers again.*
 Can apparently use an attribute called keyframes and the `animation` attribute.
@@ -114,5 +155,76 @@ Slide 2 (Mall) - [link](https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.
 Noticed the first **real** bug.
 The rating stars don't show up. 
 Need to keep an eye out for more things...
+
+<hr>
+
+## 04/30/2025
+
+Now, the design of the additional pages are beginning. The goal is to finish *all* of the pages. 
+The `Products` page will be a simple 3-rowed listing of multiple products. 
+I plan to use server-side functionality to load the products automatically, but that'll come later.
+
+The `Categories` page will be four additional categories from the original four on the front page.
+This will probably be client-sided only. 
+
+The `About Us` page is the most annoying part, but I will work on it. 
+(Eric says that lorem ipsum can be used, so I will take this.)
+
+Finally, the `Contact` page will be a centered page with dummy numbers, names, and addresses. 
+
+I will try to complete this in around an hour and give a scaffolding for production and preparation for backend functionality. 
+
+Now, beginning the editing. 
+
+### Products Page
+
+Now, the products page is (*right now*) straightforward. 
+Thanks to the CSS templates, the template card is already ready to go. 
+This is then just a matter of duplication. 
+
+For now, there will be *no* customization of the product page; this will be handled by the backend.
+For now, the stuff is there.
+
+### Categories Page
+
+Currently, the following categories exist:
+
+1. Electronics
+2. Clothing
+3. Home and Kitchen
+4. Sports and Outdoors
+
+The two categories that will be added are the following:
+
+1. Books
+2. Stationary
+
+(I *may* add more categories if I have the time.)
+
+Like the products page above, this should be a duplication thing. 
+
+Ahhhhh - just realized. 
+I have to make individual pages for **each of these.**
+This will have to be handled by the backend to serve this pages. 
+A database will need to be made as well, so the front end needs to be done and cleaned by tomorrow.
+
+### About Us Page
+
+Not going to lie; I am not creative at all, and it's near 3 in the morning. 
+This will half-done right now, then I will go back through. 
+
+It's somewhat sad, but I will put text up there.
+
+I used a lorem ipsum generator, and just copied and pasted something. 
+I needs a lot of stuff; photos, padding, etc.
+
+Need to go online and find some examples to generate a simple, but aesthetic, page.
+
+### Contact Page
+
+Same thing as the `About Us` page.
+Added some basic text with no formatting. 
+Will again look at some pages for inspiration for a simple, aesthetic page. 
+
 
 
