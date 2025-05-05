@@ -214,6 +214,23 @@ I will try to complete this in around an hour and give a scaffolding for product
 
 Now, beginning the editing. 
 
+## 05/03/2025
+
+Alright. 
+Two days and the hackathon is prety much over.
+Great. 
+Finals killed my time, so it's time to Macguyver this. 
+
+I only know the Flask framework, but I will need to d a lot of reading to figure out equivalent frameworks for static serving and templating with Node.
+Will also need to roll my database, but this will be quick.
+
+Found Express.js to be the *de facto* web server.
+EJS seems to be used for templating. 
+Time to learn by doing. 
+
+Objectives for a backend are the same. 
+Got about 6 hours to roll this. 
+
 ### Products Page
 
 Now, the products page is (*right now*) straightforward. 

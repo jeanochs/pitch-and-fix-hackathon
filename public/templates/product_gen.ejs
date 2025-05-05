@@ -1,0 +1,98 @@
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<% if (category_name == "") { %>
+		<title>All Products - ShopEase</title>
+
+		<% } else { %>
+		<title> <%= category_name %> - ShopEase </title>
+		<% } %>
+
+		<link rel="stylesheet" href="../css/styles.css">
+		<link rel="stylesheet" href="../css/responsive.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+		<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
+
+	</head>
+
+	<body>
+		<header>
+			<div class="logo-container">
+				<img src="../images/ShopEase-logo.svg" alt="ShopEase Logo" class="logo">
+			</div>
+			<nav class="main-nav">
+				<ul id="nav-items">
+					<li class="nav-item"><a href="../index.html">Home</a></li>
+					<li class="nav-item"><a href="products.html" class="active">Products</a></li>
+					<li class="nav-item"><a href="categories.html">Categories</a></li>
+					<li class="nav-item"><a href="about.html">About Us</a></li>
+					<li class="nav-item"><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+			<div class="cart-container">
+				<div class="cart-icon">
+					<i class="fas fa-shopping-cart"></i>
+					<span class="cart-count">0</span>
+				</div>
+				<div class="cart-dropdown" style="display: none;">
+					<div class="cart-items">
+						<!-- Cart items will be added here by JavaScript -->
+					</div>
+					<div class="cart-total">
+						<p>Total: $<span id="cart-total-amount">0.00</span></p>
+					</div>
+					<button class="checkout-btn">Checkout</button>
+				</div>
+			</div>
+		</header>
+
+		<% for (let i = 0; i < Math.floor(product_listing.length/3); i++) { %>
+			<!-- Product Row -->
+			<div class="product-grid">
+
+			<% product_listing.slice(i, i + 3).forEach(product => { %>
+				<!-- Product -->
+
+				<div class="product-card">
+					<div class="product-image">
+						<img src="" alt= <%= product["photo_name"] %> >
+						<div class="product-tag">Sale</div>
+					</div>
+					<div class="product-details">
+						<h3 class="product-title"><%= product["name"]  %></h3>
+						<div class="product-price">
+							<% if (product["sale"]) { %>
+							<span class="original-price"> <%= product["price"] %> </span>
+							<span class="sale-price"> <%= product["sale_price"] %> </span>
+							<% } else { %>
+							<span class="product-price"> <%= product["price"] %> </span>
+							<% } %>
+
+						</div>
+						<div class="product-rating">
+							<% for (let j = 0; j < product["rating_count"]; j++) { %>
+							<i class="fa fa-star"></i>
+							<% }; %>
+
+							<span class="rating-count">( <%= product["rating"] %> )</span>
+						</div>
+						<button class="add-to-cart-btn" data-product-id="1" data-product-name= <%= product["name"] %> data-product-price="99.99">Add to Cart</button>
+					</div>
+				</div>
+
+			<% }); %>
+
+			</div>
+		<% } %>
+				
+	</body>
+
+</html>
+
+
+
+
+
+
+
