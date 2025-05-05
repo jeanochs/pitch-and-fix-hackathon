@@ -1,4 +1,4 @@
-# Notes fo Changes and Suggested Upgrades
+# Notes of Changes and Suggested Upgrades
 
 **<center>Pitch-and-Fix Hackathon</center>**
 
@@ -7,6 +7,26 @@
 04/29/2025 - Missing Stars
 
 There are no rating stars in the actual webpage, even though it is coded in. 
+
+Upon further investigation, the stars are not in this codebase *at all* (past the mentioning in the HTML files).
+Grepping for the class names brings up nothing. 
+So, I will have to add these myself, apparently. 
+
+Upon a single search, these stars are a part of the Font Awesome stylesheet.
+(I **really** need to take these HTML/CSS classes.)
+
+I looks as if these classes are misspelled...
+
+Even simpler; the stylesheet is not even included. 
+The main website wants me to download it, but I'd rather use a CDN.
+
+Found one: [BootstrapCDN](http://www.bootstrapcdn.com/#tab_fontawesome)
+
+Nevermind; trying to find a CDN was too hard; I just downloaded a dependency and placed it into the css/ folder. 
+Stuff works now;
+
+(Also fixed a minor issue with a misnamed half star.)
+
 
 <hr>
 
@@ -43,7 +63,7 @@ The `class="active"` does not actually work.
 
 04/30/2025 - Links don't actually work
 
-When I'm on the products page, the `home` link doesn;t actually take me back home. 
+When I'm on the products page, the `home` link doesn't actually take me back home. 
 
 The URL from the Products page doesn't show the correct link:
 
@@ -62,6 +82,24 @@ file://.../pitch-and-fix-hackathon/index.html
 Not really familiar with this issue; the link is correct to my knowledge: `<li id="nav-item"><a href="index.html" class="active">Home</a></li>`
 
 I will see...
+
+From further investigation, the CSS shows this:
+
+```
+.nav-item a.active,
+.nav-item a:hover {
+  color: #0078d4;
+}
+
+```
+
+So, on hover, it should work. 
+It doesn't though. 
+Need to see what the issue is.
+
+From the above, `nav-item` is marked as an `id`, but it *should* be a class. 
+
+
 
 <hr>
 
@@ -226,5 +264,26 @@ Same thing as the `About Us` page.
 Added some basic text with no formatting. 
 Will again look at some pages for inspiration for a simple, aesthetic page. 
 
+### Further Additions
+
+Got some things that I will try to do before bed.
+
+1. Make sure all of the links are working. 
+    Forgot that the links are completely relative.
+    Since this is a client-sided redirection, the links must back out first.
+
+2. Fix the `active` tag.
+    The `active` class will be redone; the active, non-hovering link will be given a good background.
+    Upon hover, the thing should darken.
+    I'll probably change this, but this'll do so far.
+    Will also redesign the links later.
+
+3. Fix the stars.
+    The CSS will need to be updated. 
+    This is pretty trivial.
+
+4. Compressed the `nav-item` id into the `nav-item` class.
+    To call `nav-item` an `id` is improper. 
+    All attributes are in the class now. 
 
 

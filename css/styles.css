@@ -80,19 +80,23 @@ header {
   list-style: none;
 }
 
+/* Scheduled for deletion. */
 #nav-item {
-  margin-left: 1.5rem;
 }
 
 .nav-item a {
   padding: 0.5rem;
-  color: #333;
+  color: blue;
   font-weight: 500;
+  margin-left: 1.5rem;
 }
 
-.nav-item a.active,
+.nav-item a.active {
+	color: green;
+}
+
 .nav-item a:hover {
-  color: #0078d4;
+  color: black;
 }
 
 /* Cart */
