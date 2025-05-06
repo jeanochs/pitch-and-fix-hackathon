@@ -219,7 +219,7 @@ Now, beginning the editing.
 Alright. 
 Two days and the hackathon is prety much over.
 Great. 
-Finals killed my time, so it's time to Macguyver this. 
+Finals killed my time, so it's time to MacGuyver this. 
 
 I only know the Flask framework, but I will need to d a lot of reading to figure out equivalent frameworks for static serving and templating with Node.
 Will also need to roll my database, but this will be quick.
@@ -230,6 +230,40 @@ Time to learn by doing.
 
 Objectives for a backend are the same. 
 Got about 6 hours to roll this. 
+
+**<center>Later Today...</center>**
+
+Finished the products listing and database integration in full.
+(Proud of how quickly I was able to adapt; was daunting at first.)
+
+Now, need to put the finishing baubles on the website.
+Currently, there are no product pages for each product. 
+I'm going to do a *highly* general lorum ipsem page, with the only changing detail being the pictures and the description. 
+
+But first, I need to update the `About Us`  and `Contact` pages.
+I am going for a sleek, minimalist, but modern look. 
+I asked ChatGPT for inspirations, and it gave me some options from popular websites. 
+I will post the two website that what I would like to emulate. 
+
+*For the `About Us` page:*
+
+[AirBnB](https://news.airbnb.com/about-us/)
+
+*For the `Contact` page:*
+
+[Miro](https://miro.com/)
+
+The Miro page will be simplified greatly, but the lightness will be maintained.
+
+AirBnb's website is *perfect*; will be changing the style and layout. 
+
+**<center>Two hours before deadline</center>**
+
+Welp, that's it for today. 
+Did my best with the incredibly limited time that I had. 
+Will continue to cover HTML/CSS more as time permits.
+
+Now, I need to prepare the Loom video, save the database table, and perform the final commits. 
 
 ### Products Page
 

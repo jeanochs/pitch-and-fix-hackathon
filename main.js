@@ -10,7 +10,10 @@ const client = require("./product_holder");
 const app = express();
 
 // Port number 
-const port = 7777;
+const port = process.env.LOCAL_PORT;
+const host = process.env.LOCAL_ADDRESS;
+const l_port = 7777;
+const l_host = "localhost";
 
 app.set("view engine", "ejs");
 app.set("views", "./public/templates");
@@ -20,6 +23,11 @@ app.use(express.static('public'));
 // List of matches for category title
 category_titles = {
 	"sports_outdoors": "Sports and Outdoors",
+	"electronics": "Electronics",
+	"clothing": "Clothing", 
+	"home_kitchen": "Home and Kitchen",
+	"books": "Books",
+	"stationary": "Stationary"
 
 };
 
@@ -54,9 +62,12 @@ app.get("/products.html", (req, res) => {
 });
 
 
-
-app.listen(port, () => {
+app.listen(port, host, () => {
 	console.log("Server alive.");
-	console.log(`http://localhost:${port}`);
+	console.log(`http://${host}:${port}`);
 });
 
+app.listen(l_port, l_host, () => {
+	console.log("Server alive.");
+	console.log(`http://${l_host}:${l_port}`);
+});

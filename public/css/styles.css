@@ -470,3 +470,37 @@ footer {
   font-size: 0.9rem;
   color: #aaa;
 }
+
+
+/* About Us Stuff */
+.about-us_container {
+	background-color: grey;
+	padding: 1rem;
+
+}
+
+.about-us_facts {
+	background-color: grey;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
+
+}
+
+.about-us_fact_card {
+	background-color: white;
+	box-shadow: 5px 10px;
+	border: 1px solid #eee;
+	border-radius: 8px;
+	overflow: hidden;
+
+}
+
+/* Contact Card */
+.contact_card {
+	background-color: rgba(255, 255, 0, 0.5);
+	border-radius: 7rem;
+	align-items: center;
+    text-align: center;
+
+}

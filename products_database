@@ -1,0 +1,83 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 16.8 (Ubuntu 16.8-0ubuntu0.24.04.1)
+-- Dumped by pg_dump version 16.8 (Ubuntu 16.8-0ubuntu0.24.04.1)
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: products; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.products (
+    sku integer,
+    name character varying(255),
+    rating integer,
+    price money,
+    rating_count integer,
+    category character varying(255),
+    photo_name character varying(255),
+    sale boolean,
+    sale_price money
+);
+
+
+ALTER TABLE public.products OWNER TO postgres;
+
+--
+-- Data for Name: products; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.products (sku, name, rating, price, rating_count, category, photo_name, sale, sale_price) FROM stdin;
+1	Bluetooth Speakers	243	$120.00	5	electronics	images/bluetooth_speaker.jpg	t	$99.99
+2	Smart Watch	589	$90.00	4	electronics	images/smart_watch.jpg	f	$70.00
+3	Wireless Headphones	340	$129.00	5	electronics	images/wireless_headphones.jpeg	f	$100.00
+4	Laptop Bag	1200	$50.00	5	electronics	images/laptop_bag.jpg	t	$39.00
+5	Vintage Camera	340	$249.00	4	electronics	images/electronics_2_2.jpg	t	$200.00
+6	Phone Charger	3879	$30.00	4	electronics	images/electronics_2_1.jpg	t	$9.00
+7	The Long Night	23	$19.00	3	books	images/book_1.jpg	f	$19.00
+8	A Faraway Journey	33	$19.00	4	books	images/book_2.jpg	f	$19.00
+9	The Great Adventure	11	$19.00	5	books	images/book_3.jpg	f	$19.00
+10	Green Gardens	10	$19.00	5	books	images/book_4.jpg	f	$19.00
+11	Straight Lengths	5	$19.00	5	books	images/book_5.jpg	f	$19.00
+12	Mary and the Lamps	5	$19.00	5	books	images/book_6.jpg	f	$19.00
+13	Grided Notebook	6870	$2.00	5	stationary	images/stationary_1.jpg	t	$0.50
+14	Pocket Calculator	4567	$7.00	5	stationary	images/stationary_2.jpg	t	$5.50
+15	Pencils w/ Holder	9403	$10.00	4	stationary	images/stationary_3.jpg	f	$7.50
+16	Stapler	3253	$4.00	3	stationary	images/stationary_4.jpg	f	$4.00
+17	Clear Tape	1946	$2.00	5	stationary	images/stationary_5.jpg	f	$2.00
+18	Assorted Pins	249	$5.00	5	stationary	images/stationary_6.jpg	f	$5.00
+19	Football	375	$7.00	4	sports_outdoors	images/sports_outdoors_1_1.jpeg	t	$4.00
+20	Outdoor Grill	981	$150.00	5	sports_outdoors	images/sports_outdoors_1_2.jpeg	f	$150.00
+22	Patio Chairs	6483	$150.00	4	sports_outdoors	images/sports_outdoors_2_2.jpeg	t	$100.00
+23	Stainless Steel Pot	110	$70.00	5	home_kitchen	images/home_kitchen_1_1.jpg	f	$70.00
+24	High Powered Blender	22	$89.00	5	home_kitchen	images/home_kitchen_1_2.jpg	t	$50.00
+25	4 piece Knife Set	45	$39.00	5	home_kitchen	images/home_kitchen_2_1.jpg	f	$39.00
+26	Air Fryer	70	$70.00	4	home_kitchen	images/home_kitchen_2_2.jpg	t	$50.00
+27	White Shirt	104	$67.00	3	clothing	images/clothing_1_1.jpg	t	$30.00
+28	Fancy Red Dress	13	$100.00	5	clothing	images/clothing_1_2.jpg	f	$100.00
+29	Dress Shoes	58	$50.00	4	clothing	images/clothing_2_1.jpg	f	$50.00
+30	Men's Plaid Pajamas	34	$30.00	5	clothing	images/clothing_2_2.jpg	t	$15.00
+21	Outdoor Tent	291	$250.00	5	sports_outdoors	images/sports_outdoors_2_1.jpeg	t	$225.00
+\.
+
+
+--
+-- PostgreSQL database dump complete
+--
+
