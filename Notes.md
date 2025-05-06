@@ -2,6 +2,22 @@
 
 **<center>Pitch-and-Fix Hackathon</center>**
 
+## Formatting of .env file
+
+This server requires a .env file to run.
+I have provided a template (`.env_template`) that can be edited and renamed for usage.
+
+The field meaning are explained below.
+
+1. HOST - Address where the server will be listening.
+2. PORT - Port where the server will be listening.
+3. DBUSER - User name used with the Postgre database server.
+4. PASSWORD - Password for the Postgre database user.
+5. DATABASE - Name of the Postgre database.
+*Optional*
+6. LOCAL_ADDRESS - Second additional address that server can listen on. This can be blank.
+7. LOCAL_PORT - Second additional port that the server can listen on. This can be blank.
+
 ## Bug Reports
 
 04/29/2025 - Missing Stars
