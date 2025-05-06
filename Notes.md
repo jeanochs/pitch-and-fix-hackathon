@@ -9,8 +9,8 @@ I have provided a template (`.env_template`) that can be edited and renamed for 
 
 The field meaning are explained below.
 
-1. HOST - Address where the server will be listening.
-2. PORT - Port where the server will be listening.
+1. HOST - Address where the Postgres database server is listening. Default is "localhost."
+2. PORT - Port where the Postgres database server is listening. Default is 5432.
 3. DBUSER - User name used with the Postgre database server.
 4. PASSWORD - Password for the Postgre database user.
 5. DATABASE - Name of the Postgre database.
